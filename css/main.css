@@ -1,0 +1,100 @@
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: LatoBold;
+  src: url("../fonts/Lato-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: LatoItalic;
+  src: url("../fonts/Lato-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --color-1: #0d0221;
+  --color-2: #0f084b;
+  --color-3: #26408b;
+  --color-4: #a6cfd5;
+  --color-5: #c2e7d9;
+
+  font-size: 62.5%; /* 10px */
+}
+
+body {
+  background-color: var(--color-1);
+}
+
+a {
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 6rem;
+}
+
+header img {
+  width: 4.8rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+nav a {
+  color: var(--color-5);
+  font-family: Lato;
+  font-size: 1.6rem;
+
+  /* Bold effect */
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1.5rem;
+
+  /* Underline effect */
+  position: relative;
+}
+
+/* Bold effect */
+nav a:hover {
+  font-family: LatoBold;
+}
+
+/* Used because we can only have one ::after */
+nav a::before {
+  content: attr(data-text);
+  height: 0;
+  visibility: hidden;
+  user-select: none;
+  pointer-events: none;
+  font-family: LatoBold;
+}
+
+/* Underline effect */
+nav a::after {
+  content: "";
+  width: 0;
+  height: 0.3rem;
+  background: var(--color-5);
+  position: absolute;
+  bottom: -0.6rem;
+  left: 0;
+  transition: 0.5s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
