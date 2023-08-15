@@ -8,6 +8,7 @@ header nav .link_projects {
 
 header nav .link_projects::after {
   width: 100%;
+  transition: 0s;
 }
 
 p {

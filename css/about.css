@@ -8,6 +8,7 @@ header nav .link_about {
 
 header nav .link_about::after {
   width: 100%;
+  transition: 0s;
 }
 
 p {

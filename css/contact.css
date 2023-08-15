@@ -8,6 +8,7 @@ header nav .link_contact {
 
 header nav .link_contact::after {
   width: 100%;
+  transition: 0s;
 }
 
 p {
