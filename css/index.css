@@ -1,0 +1,45 @@
+main {
+  padding: 6rem 16rem;
+}
+
+main h1 {
+  font-size: 7rem;
+  color: var(--color-4);
+  font-family: Lato;
+}
+
+#hi {
+  margin-bottom: 3rem;
+}
+
+[class="3d"] {
+  text-shadow: 0.04rem 0.1rem 0.03rem var(--color-3),
+    0.08rem 0.2rem 0.06rem var(--color-3), 0.12rem 0.3rem 0.09rem var(--color-3),
+    0.16rem 0.4rem 0.12rem var(--color-3), 0.2rem 0.5rem 0.15rem var(--color-3);
+}
+
+#name {
+  display: inline-block;
+}
+
+#name::first-letter {
+  color: var(--color-5);
+  text-shadow: 0.04rem 0.1rem 0.03rem var(--color-6),
+    0.08rem 0.2rem 0.06rem var(--color-6), 0.12rem 0.3rem 0.09rem var(--color-6),
+    0.16rem 0.4rem 0.12rem var(--color-6), 0.2rem 0.5rem 0.15rem var(--color-6);
+}
+
+main h2 {
+  font-size: 4rem;
+  color: var(--color-4);
+  font-family: Lato;
+  margin-top: 1rem;
+}
+
+#javascript {
+  width: 3.6rem;
+  border-radius: 10%;
+  position: relative;
+  top: 0.2rem;
+  left: 0.2rem;
+}

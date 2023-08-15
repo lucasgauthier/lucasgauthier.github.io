@@ -1,0 +1,17 @@
+main {
+  padding: 2rem 8rem;
+}
+
+header nav .link_contact {
+  font-family: LatoBold;
+}
+
+header nav .link_contact::after {
+  width: 100%;
+}
+
+p {
+  font-family: Lato;
+  color: var(--color-4);
+  font-size: 3rem;
+}

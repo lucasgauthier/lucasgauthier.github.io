@@ -1,62 +1,87 @@
+/* --- Fonts --- */
+
 @font-face {
   font-family: Lato;
-  src: url("../fonts/Lato-Regular.ttf") format("truetype");
+  src: url("../fonts/Lato/Lato-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: LatoBold;
-  src: url("../fonts/Lato-Bold.ttf") format("truetype");
+  src: url("../fonts/Lato/Lato-Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: LatoItalic;
-  src: url("../fonts/Lato-Italic.ttf") format("truetype");
+  src: url("../fonts/Lato/Lato-Italic.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
+.emoji {
+  font-family: "Apple Color Emoji", sans-serif;
+}
+
+/* --- Constants --- */
+
 :root {
-  --color-1: #0d0221;
-  --color-2: #0f084b;
+  /* From https://coolors.co/041225-061b37-26408b-bbd8f2-be0e34 */
+  --color-1: #041225;
+  --color-2: #061b37;
   --color-3: #26408b;
-  --color-4: #a6cfd5;
-  --color-5: #c2e7d9;
+  --color-4: #bbd8f2;
+  --color-5: #be0e34;
+
+  --color-6: #4c0615;
 
   font-size: 62.5%; /* 10px */
 }
 
+/* --- General --- */
+
 body {
-  background-color: var(--color-1);
+  background-color: var(--color-2);
 }
 
 a {
   cursor: pointer;
 }
 
+/* --- Header --- */
+
 header {
+  background-color: var(--color-1);
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 2rem 6rem;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+}
+
+#header-logo {
+  height: 4.8rem;
 }
 
 header img {
-  width: 4.8rem;
+  height: 100%;
 }
 
-nav {
+header nav {
   display: flex;
   align-items: center;
   gap: 5rem;
 }
 
-nav a {
-  color: var(--color-5);
+header nav a {
+  color: var(--color-4);
   font-family: Lato;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 
   /* Bold effect */
   display: inline-flex;
@@ -69,12 +94,12 @@ nav a {
 }
 
 /* Bold effect */
-nav a:hover {
+header nav a:hover {
   font-family: LatoBold;
 }
 
 /* Used because we can only have one ::after */
-nav a::before {
+header nav a::before {
   content: attr(data-text);
   height: 0;
   visibility: hidden;
@@ -84,7 +109,7 @@ nav a::before {
 }
 
 /* Underline effect */
-nav a::after {
+header nav a::after {
   content: "";
   width: 0;
   height: 0.3rem;
@@ -95,6 +120,32 @@ nav a::after {
   transition: 0.5s;
 }
 
-nav a:hover::after {
+header nav a:hover::after {
   width: 100%;
+}
+
+/* --- Main --- */
+
+main {
+  margin-top: 8.8rem; /* Depends on the header height */
+  margin-bottom: 3.6rem; /* Depends on the footer height */
+}
+
+/* --- Footer --- */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 3.6rem;
+  background-color: var(--color-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  font-size: 1.2rem;
+  font-family: Lato;
+  color: var(--color-4);
 }
